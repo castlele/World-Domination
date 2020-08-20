@@ -4,7 +4,8 @@ import WDdist as WD
 import sys
 import os
 
-# const
+
+# co
 country = Tk()
 country.geometry("800x422")
 country.resizable(False, False)
