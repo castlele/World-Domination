@@ -49,7 +49,7 @@ ecology_name = Label(general, text='Экология:', font=bold, fg='red', bg=
 ecology_rate = Button(general, text=f'{dist.EcologyRate()}', font=size_15, fg='red', bg='#b3b3b3', command=restart_program)
 
 live_level = Label(general, text=f'{list_sorted[0][2]}%', font=size_15, bg='#56f021', fg='white') 
-live_level1 = Label(general, text=f'{list_sorted[1][2]}%', font=size_15, bg='#56f021', fg='white') 
+live_level1 = Label(general, text=f'{list_sorted[1][2]}%', font=size_15, bg='#757575', fg='white') 
 live_level2 = Label(general, text=f'{list_sorted[2][2]}%', font=size_15, fg='white', bg='#b3b3b3')
 live_level3 = Label(general, text=f'{list_sorted[3][2]}%', font=size_15, fg='white', bg='#b3b3b3')
 live_level4 = Label(general, text=f'{list_sorted[4][2]}%', font=size_15, fg='white', bg='#b3b3b3')
@@ -63,11 +63,11 @@ country4_frame = LabelFrame(general, bg='#757575')
 country5_frame = LabelFrame(general, bg='#757575')
 
 country_name = Label(country_frame, text=f'{list_sorted[0][0]}', fg='white', bg='#56f021', font=bold)
-country1_name = Label(country1_frame, text=f'{list_sorted[1][0]}', fg='white', bg='#56f021', font=bold)
+country1_name = Label(country1_frame, text=f'{list_sorted[1][0]}', fg='white', bg='#757575', font=bold)
 country2_name = Label(country2_frame, text=f'{list_sorted[2][0]}', fg='white', bg='#b3b3b3', font=bold)
 country3_name = Label(country3_frame, text=f'{list_sorted[3][0]}', fg='white', bg='#b3b3b3', font=bold)
-country3_name = Label(country4_frame, text=f'{list_sorted[4][0]}', fg='white', bg='#b3b3b3', font=bold)
-country4_name = Label(country5_frame, text=f'{list_sorted[5][0]}', fg='white', bg='red', font=bold)
+country4_name = Label(country4_frame, text=f'{list_sorted[4][0]}', fg='white', bg='#b3b3b3', font=bold)
+country5_name = Label(country5_frame, text=f'{list_sorted[5][0]}', fg='white', bg='red', font=bold)
 
 city = Label(country_frame, text=f'{dist0.StatsOfCities(0)[0][0]}', bg='#757575', font=bold_11)
 city_1 = Label(country_frame, text=f'{dist0.StatsOfCities(0)[1][0]}', bg='#757575', font=bold_11)

@@ -16,14 +16,17 @@ rockets_on_city = list()
 sanctions_on_city = list()
 
 trans = Translator() # Google translator
-print(excel)
 
-def Parsing(list_of_dicts):
-
+def len_checker(list_of_dicts):
+""" Function checks if len of dict is greater, then 4 
+	if so, deletes first rows 
+"""
 	# Delete old rows
 	while len(list_of_dicts) > 4:
 		del list_of_dicts[0]
-	
+	return list_of_dicts
+
+def Parsing(list_of_dicts):
 	for dicts in list_of_dicts:
 		for keys in dicts:
 			evolve = ['0', '0', '0', '0'] # Evolution of Cities

@@ -1,4 +1,4 @@
-чйimport gspread
+import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from googletrans import Translator
 
@@ -9,21 +9,24 @@ gs = gspread.authorize(credentials)
 
 # Open and assign 
 sheet = gs.open('World Domination').sheet1
-excel = sheet.get_all_records() # Transfer Google Sheets as list of dictionaries
+excel = sheet.get_all_records() # Transfer Google kSheets as list of dictionaries
 parsed_list = list() # List of with parsed info from Google Sheets
 rockets = list()
 rockets_on_city = list()
 sanctions_on_city = list()
 
 trans = Translator() # Google translator
-print(excel)
 
-def Parsing(list_of_dicts):
-
+def len_checker(list_of_dicts):
+""" Function checks if len of dict is greater, then 4 
+	if so, deletes first rows 
+"""
 	# Delete old rows
 	while len(list_of_dicts) > 4:
 		del list_of_dicts[0]
-	
+	return list_of_dicts
+
+def Parsing(list_of_dicts):
 	for dicts in list_of_dicts:
 		for keys in dicts:
 			evolve = ['0', '0', '0', '0'] # Evolution of Cities
@@ -183,4 +186,5 @@ def Parsing(list_of_dicts):
 
 if __name__ == '__main__':
 	file = open('parsed_info.txt', 'w')
+	len_checker(excel)
 	Parsing(excel)
